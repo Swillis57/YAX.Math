@@ -74,7 +74,7 @@ namespace YAX
 
 #ifdef YAX_GEOMETRY
 		static Matrix CreateReflection(const Plane& plane);
-		static Matrix CreateShadow(const FVector3& lightDir, const Plane& plane);
+		static Matrix CreateShadow(const Vector3& lightDir, const Plane& plane);
 #endif
 
 		static Matrix Invert(const Matrix& mat);
