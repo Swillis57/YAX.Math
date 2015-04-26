@@ -1,8 +1,6 @@
 #ifndef _MATH_HELPER_H
 #define _MATH_HELPER_H
 
-#include "../../YAX/include/Utils.h"
-
 namespace YAX
 {
 	namespace MathHelper
@@ -105,7 +103,7 @@ namespace YAX
 		* @param val The value to extract the sign from
 		* @return -1 if val is negative, 1 if positive, 0 if 0
 		*/
-		i32 Sign(float v);
+		int Sign(float v);
 
 		/**
 		* @brief Converts a given value to degrees

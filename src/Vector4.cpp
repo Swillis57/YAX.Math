@@ -150,17 +150,17 @@ namespace YAX
 		return Vector4(res.X, res.Y, res.Z, res.W);
 	}
 
-	void Vector4::Transform(const std::vector<Vector4>& source, i32 sourceIdx, const Matrix& mat, std::vector<Vector4>& dest, i32 destIdx, i32 count)
+	void Vector4::Transform(const std::vector<Vector4>& source, int sourceIdx, const Matrix& mat, std::vector<Vector4>& dest, int destIdx, int count)
 	{
-		for (i32 i = sourceIdx; i < sourceIdx + count; i++)
+		for (int i = sourceIdx; i < sourceIdx + count; i++)
 		{
 			dest[destIdx + (i - sourceIdx)] = Transform(source[i], mat);
 		}
 	}
 
-	void Vector4::Transform(const std::vector<Vector4>& source, i32 sourceIdx, const Quaternion& q, std::vector<Vector4>& dest, i32 destIdx, i32 count)
+	void Vector4::Transform(const std::vector<Vector4>& source, int sourceIdx, const Quaternion& q, std::vector<Vector4>& dest, int destIdx, int count)
 	{
-		for (i32 i = sourceIdx; i < sourceIdx + count; i++)
+		for (int i = sourceIdx; i < sourceIdx + count; i++)
 		{
 			dest[destIdx + (i - sourceIdx)] = Transform(source[i], q);
 		}
@@ -186,9 +186,9 @@ namespace YAX
 		return Vector4(x, y, z, 0);
 	}
 
-	void Vector4::TransformNormal(const std::vector<Vector4>& source, i32 sourceIdx, const Matrix& mat, std::vector<Vector4>& dest, i32 destIdx, i32 count)
+	void Vector4::TransformNormal(const std::vector<Vector4>& source, int sourceIdx, const Matrix& mat, std::vector<Vector4>& dest, int destIdx, int count)
 	{
-		for (i32 i = sourceIdx; i < sourceIdx + count; i++)
+		for (int i = sourceIdx; i < sourceIdx + count; i++)
 		{
 			dest[destIdx + (i - sourceIdx)] = TransformNormal(source[i], mat);
 		}

@@ -1,6 +1,5 @@
 #include "../include/Matrix.h"
 #include <exception>
-#include "../../YAX.Geometry/include/Plane.h"
 #include "../include/MathHelper.h"
 #include "../include/Quaternion.h"
 #include "../include/Vector3.h"
@@ -313,19 +312,6 @@ namespace YAX
 								0,			 0, zN*zF/(zN-zF), 0);
 	}
 
-	Matrix Matrix::CreateReflection(const Plane& p)
-	{
-		Vector3 n = p.Normal;
-		float a = n.X, b = n.Y, c = n.Z, d = p.D;
-
-		float ab = -2*a*b, ac = -2*a*c, ad = -2*a*d, bc = -2*b*c, bd = -2*b*d, cd = -2*c*d;
-
-		return Matrix(-2*a*a+1,		  ab,		ac, 0,
-							ab, -2*b*b+1,		bc, 0,
-							ac,		  bc, -2*c*c+1, 0,
-							ad,		  bd,		cd, 1.0f);
-	}
-
 	Matrix Matrix::CreateRotationX(float angle)
 	{
 		return CreateFromAxisAngle(Vector3::Right, angle);
@@ -360,18 +346,6 @@ namespace YAX
 	Matrix Matrix::CreateScale(const Vector3& scaleVec)
 	{
 		return CreateScale(scaleVec.X, scaleVec.Y, scaleVec.Z);
-	}
-
-	Matrix Matrix::CreateShadow(const Vector3& lightDir, const Plane& plane)
-	{
-		Vector3 l = -lightDir;
-		Vector3 pN = plane.Normal;
-		float d = plane.D;
-		float s = -Vector3::Dot(l, pN);
-		return Matrix(pN.X*l.X+s,   pN.X*l.Y,   pN.X*l.Z, 0,
-					    pN.Y*l.X, pN.Y*l.Y+s,   pN.Y*l.Z, 0, 
-					    pN.Z*l.X,   pN.Z*l.Y, pN.Z*l.Z+s, 0,
-					       d*l.X,      d*l.Y,      d*l.Z, s);
 	}
 
 	Matrix Matrix::CreateTranslation(float xT, float yT, float zT)

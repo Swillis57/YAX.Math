@@ -2,7 +2,6 @@
 #define _VEC4_H
 
 #include <vector>
-#include "../../YAX/include/Utils.h"
 
 namespace YAX
 {
@@ -42,13 +41,13 @@ namespace YAX
 
 		static Vector4 Transform(const Vector4& vec, const Matrix& mat);
 		static Vector4 Transform(const Vector4& vec, const Quaternion& q);
-		static void Transform(const std::vector<Vector4>& source, i32 sourceIdx, const Matrix& mat, std::vector<Vector4>& dest, i32 destIdx, i32 count);
-		static void Transform(const std::vector<Vector4>& source, i32 sourceIdx, const Quaternion& q, std::vector<Vector4>& dest, i32 destIdx, i32 count);
+		static void Transform(const std::vector<Vector4>& source, int sourceIdx, const Matrix& mat, std::vector<Vector4>& dest, int destIdx, int count);
+		static void Transform(const std::vector<Vector4>& source, int sourceIdx, const Quaternion& q, std::vector<Vector4>& dest, int destIdx, int count);
 		static void Transform(const std::vector<Vector4>& source, const Matrix& mat, std::vector<Vector4>& dest);
 		static void Transform(const std::vector<Vector4>& source, const Quaternion& q, std::vector<Vector4>& dest);
 
 		static Vector4 TransformNormal(const Vector4& norm, const Matrix& mat);
-		static void TransformNormal(const std::vector<Vector4>& source, i32 sourceIdx, const Matrix& mat, std::vector<Vector4>& dest, i32 destIdx, i32 count);
+		static void TransformNormal(const std::vector<Vector4>& source, int sourceIdx, const Matrix& mat, std::vector<Vector4>& dest, int destIdx, int count);
 		static void TransformNormal(const std::vector<Vector4>& source, const Matrix& mat, std::vector<Vector4>& dest);
 
 		Vector4& operator+=(const Vector4&);

@@ -163,7 +163,7 @@ namespace YAX
 		return Vector3(res.X, res.Y, res.Z);
 	}
 
-	void Vector3::Transform(const std::vector<Vector3>& source, i32 sourceIdx, const Matrix& mat, std::vector<Vector3>& dest, i32 destIdx, i32 count)
+	void Vector3::Transform(const std::vector<Vector3>& source, int sourceIdx, const Matrix& mat, std::vector<Vector3>& dest, int destIdx, int count)
 	{
 		for (auto i = sourceIdx; i < sourceIdx + count; i++)
 		{
@@ -171,7 +171,7 @@ namespace YAX
 		}
 	}
 
-	void Vector3::Transform(const std::vector<Vector3>& source, i32 sourceIdx, const Quaternion& q, std::vector<Vector3>& dest, i32 destIdx, i32 count)
+	void Vector3::Transform(const std::vector<Vector3>& source, int sourceIdx, const Quaternion& q, std::vector<Vector3>& dest, int destIdx, int count)
 	{
 		for (auto i = sourceIdx; i < sourceIdx + count; i++)
 		{
@@ -199,7 +199,7 @@ namespace YAX
 		);
 	}
 
-	void Vector3::TransformNormal(const std::vector<Vector3>& source, i32 sourceIdx, const Matrix& mat, std::vector<Vector3>& dest, i32 destIdx, i32 count)
+	void Vector3::TransformNormal(const std::vector<Vector3>& source, int sourceIdx, const Matrix& mat, std::vector<Vector3>& dest, int destIdx, int count)
 	{
 		for (auto i = sourceIdx; i < sourceIdx + count; i++)
 		{
