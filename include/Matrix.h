@@ -72,6 +72,11 @@ namespace YAX
 		static Matrix CreateTranslation(const Vector3& vec);
 		static Matrix CreateWorld(Vector3 pos, Vector3 fwd, Vector3 up);
 
+#ifdef YAX_GEOMETRY
+		static Matrix CreateReflection(const Plane& plane);
+		static Matrix CreateShadow(const FVector3& lightDir, const Plane& plane);
+#endif
+
 		static Matrix Invert(const Matrix& mat);
 		static Matrix Lerp(const Matrix& from, const Matrix& to, float t);
 		static Matrix Transform(const Matrix& mat, const Quaternion& rotation);
