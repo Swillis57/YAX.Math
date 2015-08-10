@@ -1,5 +1,7 @@
 Microsoft Public License (Ms-PL)
-YAX.Math - Copyright (c) Sam Willis 2015
+
+XNA Game Studio - Copyright (c) 2010 Microsoft <br>
+YAX and YAX.Math - Copyright (c) 2014-2015 Sam Willis 
 
 All rights reserved.
 
