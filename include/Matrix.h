@@ -97,7 +97,7 @@ namespace YAX
 	Matrix operator*(Matrix, float);
 	Matrix operator/(Matrix, const Matrix&);
 	Matrix operator/(Matrix, float);
-	Matrix operator-(const Matrix&);
+	Matrix operator-(Matrix);
 
 	bool operator==(const Matrix&, const Matrix&);
 	bool operator!=(const Matrix&, const Matrix&);
