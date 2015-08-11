@@ -1,8 +1,8 @@
-#include "../include/Quaternion.h"
+#include "Quaternion.h"
 
-#include "../include/MathHelper.h" 
-#include "../include/Matrix.h"
-#include "../include/Vector3.h"
+#include "MathHelper.h" 
+#include "Matrix.h"
+#include "Vector3.h"
 
 namespace YAX
 {

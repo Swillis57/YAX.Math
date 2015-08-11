@@ -1,11 +1,12 @@
-#include "../include/Matrix.h"
+#include "Matrix.h"
+
 #include <exception>
-#include "../include/MathHelper.h"
-#include "../include/Quaternion.h"
-#include "../include/Vector3.h"
+#include "MathHelper.h"
+#include "Quaternion.h"
+#include "Vector3.h"
 
 #ifdef YAX_GEOMETRY
-#include "../include/Plane.h"
+#include "Plane.h"
 #endif
 
 namespace YAX

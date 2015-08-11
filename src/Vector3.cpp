@@ -1,10 +1,10 @@
-#include "../include/Vector3.h"
+#include "Vector3.h"
 
 #include <cmath>
-#include "../include/MathHelper.h"
-#include "../include/Matrix.h"
-#include "../include/Quaternion.h"
-#include "../include/Vector2.h"
+#include "MathHelper.h"
+#include "Matrix.h"
+#include "Quaternion.h"
+#include "Vector2.h"
 
 namespace YAX
 {	
@@ -163,7 +163,7 @@ namespace YAX
 		return Vector3(res.X, res.Y, res.Z);
 	}
 
-	void Vector3::Transform(const std::vector<Vector3>& source, i32 sourceIdx, const Matrix& mat, std::vector<Vector3>& dest, i32 destIdx, i32 count)
+	void Vector3::Transform(const std::vector<Vector3>& source, ui32 sourceIdx, const Matrix& mat, std::vector<Vector3>& dest, ui32 destIdx, ui32 count)
 	{
 		for (auto i = sourceIdx; i < sourceIdx + count; i++)
 		{
@@ -171,7 +171,7 @@ namespace YAX
 		}
 	}
 
-	void Vector3::Transform(const std::vector<Vector3>& source, i32 sourceIdx, const Quaternion& q, std::vector<Vector3>& dest, i32 destIdx, i32 count)
+	void Vector3::Transform(const std::vector<Vector3>& source, ui32 sourceIdx, const Quaternion& q, std::vector<Vector3>& dest, ui32 destIdx, ui32 count)
 	{
 		for (auto i = sourceIdx; i < sourceIdx + count; i++)
 		{
@@ -181,12 +181,12 @@ namespace YAX
 
 	void Vector3::Transform(const std::vector<Vector3>& source, const Matrix& mat, std::vector<Vector3>& dest)
 	{
-		Transform(source, 0, mat, dest, 0, source.size());
+		Transform(source, 0, mat, dest, 0, (ui32)source.size());
 	}
 
 	void Vector3::Transform(const std::vector<Vector3>& source, const Quaternion& q, std::vector<Vector3>& dest)
 	{
-		Transform(source, 0, q, dest, 0, source.size());
+		Transform(source, 0, q, dest, 0, (ui32)source.size());
 	}
 
 	Vector3 Vector3::TransformNormal(const Vector3& norm, const Matrix& mat)
@@ -199,7 +199,7 @@ namespace YAX
 		);
 	}
 
-	void Vector3::TransformNormal(const std::vector<Vector3>& source, i32 sourceIdx, const Matrix& mat, std::vector<Vector3>& dest, i32 destIdx, i32 count)
+	void Vector3::TransformNormal(const std::vector<Vector3>& source, ui32 sourceIdx, const Matrix& mat, std::vector<Vector3>& dest, ui32 destIdx, ui32 count)
 	{
 		for (auto i = sourceIdx; i < sourceIdx + count; i++)
 		{
@@ -209,7 +209,7 @@ namespace YAX
 
 	void Vector3::TransformNormal(const std::vector<Vector3>& source, const Matrix& mat, std::vector<Vector3>& dest)
 	{
-		TransformNormal(source, 0, mat, dest, 0, source.size());
+		TransformNormal(source, 0, mat, dest, 0, (ui32)source.size());
 	}
 
 	Vector3& Vector3::operator+=(const Vector3& v)

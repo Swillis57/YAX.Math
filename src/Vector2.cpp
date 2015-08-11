@@ -1,8 +1,9 @@
-#include "../include/Vector2.h"
+#include "Vector2.h"
+
 #include <cmath>
-#include "../include/Matrix.h"
-#include "../include/Quaternion.h"
-#include "../include/MathHelper.h"
+#include "Matrix.h"
+#include "Quaternion.h"
+#include "MathHelper.h"
 
 namespace YAX
 {
@@ -134,7 +135,7 @@ namespace YAX
 		return Vector2(res.X, res.Y);
 	}
 
-	void Vector2::Transform(const std::vector<Vector2>& source, i32 sourceIdx, const Matrix& mat, std::vector<Vector2>& dest, i32 destIdx, i32 count)
+	void Vector2::Transform(const std::vector<Vector2>& source, ui32 sourceIdx, const Matrix& mat, std::vector<Vector2>& dest, ui32 destIdx, ui32 count)
 	{
 		for (auto i = sourceIdx; i < sourceIdx + count; i++)
 		{
@@ -142,7 +143,7 @@ namespace YAX
 		}
 	}
 
-	void Vector2::Transform(const std::vector<Vector2>& source, i32 sourceIdx, const Quaternion& q, std::vector<Vector2>& dest, i32 destIdx, i32 count)
+	void Vector2::Transform(const std::vector<Vector2>& source, ui32 sourceIdx, const Quaternion& q, std::vector<Vector2>& dest, ui32 destIdx, ui32 count)
 	{
 		for (auto i = sourceIdx; i < sourceIdx + count; i++)
 		{
@@ -152,12 +153,12 @@ namespace YAX
 
 	void Vector2::Transform(const std::vector<Vector2>& source, const Matrix& mat, std::vector<Vector2>& dest)
 	{
-		Transform(source, 0, mat, dest, 0, source.size());
+		Transform(source, 0, mat, dest, 0, (ui32)source.size());
 	}
 
 	void Vector2::Transform(const std::vector<Vector2>& source, const Quaternion& q, std::vector<Vector2>& dest)
 	{
-		Transform(source, 0, q, dest, 0, source.size());
+		Transform(source, 0, q, dest, 0, (ui32)source.size());
 	}
 
 	Vector2 Vector2::TransformNormal(const Vector2& normal, const Matrix& mat)
@@ -169,7 +170,7 @@ namespace YAX
 		);
 	}	
 
-	void Vector2::TransformNormal(const std::vector<Vector2>& source, i32 sourceIdx, const Matrix& mat, std::vector<Vector2>& dest, i32 destIdx, i32 count)
+	void Vector2::TransformNormal(const std::vector<Vector2>& source, ui32 sourceIdx, const Matrix& mat, std::vector<Vector2>& dest, ui32 destIdx, ui32 count)
 	{
 		for (auto i = sourceIdx; i < sourceIdx + count; i++)
 		{
@@ -179,7 +180,7 @@ namespace YAX
 
 	void Vector2::TransformNormal(const std::vector<Vector2>& source, const Matrix& mat, std::vector<Vector2>& dest)
 	{
-		TransformNormal(source, 0, mat, dest, 0, source.size());
+		TransformNormal(source, 0, mat, dest, 0, (ui32)source.size());
 	}
 
 	Vector2& Vector2::operator+=(const Vector2& rhs)

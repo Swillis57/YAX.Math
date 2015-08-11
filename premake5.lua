@@ -6,7 +6,7 @@ project "YAX.Math"
     language "C++"
 
     targetdir "out/%{cfg.buildcfg}/%{cfg.platform}"
-    includedirs "include"
+    includedirs "include/"
     files "include/*.h"
     files "src/*.cpp"
     
