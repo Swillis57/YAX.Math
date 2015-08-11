@@ -25,3 +25,9 @@ project "YAX.Math"
     filter "configurations:Release*"
         floatingpoint "Strict"
         optimize "Full"
+        
+    filter "system:windows"
+        postbuildcommands {"xcopy include out\\include /I /E"}
+        
+    filter "system:not windows"
+        postbuildcommands {"cp -r ./include ./out/"}
