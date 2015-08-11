@@ -10,7 +10,7 @@ The standalone version of YAX's (and by extension XNA's) math utility classes. E
 
 ### Building:
 YAX.Math uses premake to generate project files. If you don't already have it, download premake5 from [here](http://premake.github.io/download.html), put it somewhere accessible from the command line, and run like so: <br>
-```
+```bash
 cd /path/to/YAX.Math
 
 #for Visual Studio 2013
