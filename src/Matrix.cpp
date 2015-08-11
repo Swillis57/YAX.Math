@@ -318,7 +318,7 @@ namespace YAX
 	}
 
 #ifdef YAX_GEOMETRY
-	Matrix::CreateReflection(const Plane& plane)
+	Matrix Matrix::CreateReflection(const Plane& plane)
 	{
 		Vector3 n = plane.Normal;
 		float a = n.X, b = n.Y, c = n.Z, d = plane.D;
