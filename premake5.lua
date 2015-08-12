@@ -27,7 +27,7 @@ project "YAX.Math"
         optimize "Full"
         
     filter "system:windows"
-        postbuildcommands {"xcopy include out\\include /I /E"}
+        postbuildcommands {"xcopy include out\\include\\ /I /E /Y"}
         
     filter "system:not windows"
         postbuildcommands {"cp -r ./include ./out/"}
