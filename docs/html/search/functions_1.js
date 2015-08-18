@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['catmullrom',['CatmullRom',['../struct_y_a_x_1_1_vector2.html#a03fd710f23f7aa38abd5f7d3d13cdd2c',1,'YAX::Vector2::CatmullRom()'],['../struct_y_a_x_1_1_vector3.html#aa508a574b4638e76f248bc5b1d2b4128',1,'YAX::Vector3::CatmullRom()'],['../struct_y_a_x_1_1_vector4.html#a5f79d2679c5a52fc09026ea1b72bc118',1,'YAX::Vector4::CatmullRom()']]],
+  ['clamp',['Clamp',['../struct_y_a_x_1_1_vector2.html#a27c10b6bb465336e27d4347b0c4150f5',1,'YAX::Vector2::Clamp()'],['../struct_y_a_x_1_1_vector3.html#a6923d47aba27aa438bc6e1b9219a29e6',1,'YAX::Vector3::Clamp()'],['../struct_y_a_x_1_1_vector4.html#a0f8bc03ed4b3b50521eaf0584dc8e892',1,'YAX::Vector4::Clamp()']]],
+  ['concatenate',['Concatenate',['../struct_y_a_x_1_1_quaternion.html#afa4d510d13e7376772789889215e6a6c',1,'YAX::Quaternion']]],
+  ['conjugate',['Conjugate',['../struct_y_a_x_1_1_quaternion.html#aa17358fb64b129a2dfe3f1285fd5c135',1,'YAX::Quaternion::Conjugate()'],['../struct_y_a_x_1_1_quaternion.html#a9b4cff432c2be3d85b8c584f3648924b',1,'YAX::Quaternion::Conjugate(Quaternion q)']]],
+  ['createbillboard',['CreateBillboard',['../struct_y_a_x_1_1_matrix.html#ad91d285220229cf5ff9a37d9e5890dbb',1,'YAX::Matrix']]],
+  ['createconstrainedbillboard',['CreateConstrainedBillboard',['../struct_y_a_x_1_1_matrix.html#ad6381512ad446088e6a108ebe03235c8',1,'YAX::Matrix']]],
+  ['createfromaxisangle',['CreateFromAxisAngle',['../struct_y_a_x_1_1_matrix.html#a09759ee54a96df2fc63672f6868703c8',1,'YAX::Matrix::CreateFromAxisAngle()'],['../struct_y_a_x_1_1_quaternion.html#a95acb24e5e4806a82b27735976d3ef13',1,'YAX::Quaternion::CreateFromAxisAngle()']]],
+  ['createfromquaternion',['CreateFromQuaternion',['../struct_y_a_x_1_1_matrix.html#ad2fadbe52b01eff729b4c78322afd505',1,'YAX::Matrix']]],
+  ['createfromrotationmatrix',['CreateFromRotationMatrix',['../struct_y_a_x_1_1_quaternion.html#a6ba2de67ff07f849b9503009c157498e',1,'YAX::Quaternion']]],
+  ['createfromyawpitchroll',['CreateFromYawPitchRoll',['../struct_y_a_x_1_1_matrix.html#abdeeb78a1095fa920948e5d3b65bd66d',1,'YAX::Matrix::CreateFromYawPitchRoll()'],['../struct_y_a_x_1_1_quaternion.html#a39b7eee65c3ff388729405b84691c80c',1,'YAX::Quaternion::CreateFromYawPitchRoll()']]],
+  ['createlookat',['CreateLookAt',['../struct_y_a_x_1_1_matrix.html#a618f77aa2d190148e13799227918ec11',1,'YAX::Matrix']]],
+  ['createorthographic',['CreateOrthographic',['../struct_y_a_x_1_1_matrix.html#a83dd5ccde565a0b0ff37686721a784cd',1,'YAX::Matrix']]],
+  ['createorthographicoffcenter',['CreateOrthographicOffCenter',['../struct_y_a_x_1_1_matrix.html#ae4ebe1d94e05eaa73697f69fa7311ea9',1,'YAX::Matrix']]],
+  ['createperspective',['CreatePerspective',['../struct_y_a_x_1_1_matrix.html#ab89d87cc3a49bb9b10866cd0b2f5743e',1,'YAX::Matrix']]],
+  ['createperspectivefieldofview',['CreatePerspectiveFieldOfView',['../struct_y_a_x_1_1_matrix.html#a80bccc1e5bd7e1b5f38c2cb7eda58790',1,'YAX::Matrix']]],
+  ['createperspectiveoffcenter',['CreatePerspectiveOffCenter',['../struct_y_a_x_1_1_matrix.html#ac15f3f8de5a61e1b67f88ee0282a41fc',1,'YAX::Matrix']]],
+  ['createreflection',['CreateReflection',['../struct_y_a_x_1_1_matrix.html#a67344fc73aea71b1bcf4fc5d66335f87',1,'YAX::Matrix']]],
+  ['createrotationx',['CreateRotationX',['../struct_y_a_x_1_1_matrix.html#a586003476615d13ae382a8abf609ed1f',1,'YAX::Matrix']]],
+  ['createrotationy',['CreateRotationY',['../struct_y_a_x_1_1_matrix.html#ae9531adbb2503f2b3a47d58a3f5096d4',1,'YAX::Matrix']]],
+  ['createrotationz',['CreateRotationZ',['../struct_y_a_x_1_1_matrix.html#ac19bbddd7969055c7413399f91743b23',1,'YAX::Matrix']]],
+  ['createscale',['CreateScale',['../struct_y_a_x_1_1_matrix.html#a4f732f64d3f60596769503d465e15f2d',1,'YAX::Matrix::CreateScale(float scale)'],['../struct_y_a_x_1_1_matrix.html#af9c1c60ddf93fa9e12b8f2e5e9bc1b89',1,'YAX::Matrix::CreateScale(float scaleX, float scaleY, float scaleZ)'],['../struct_y_a_x_1_1_matrix.html#ad6421dc747f27f9469efb14111469c68',1,'YAX::Matrix::CreateScale(const Vector3 &amp;scaleVec)']]],
+  ['createshadow',['CreateShadow',['../struct_y_a_x_1_1_matrix.html#a88fa0f98a6154b7c2c7f163d38a415a0',1,'YAX::Matrix']]],
+  ['createtranslation',['CreateTranslation',['../struct_y_a_x_1_1_matrix.html#a6c8ba8713c2f9360ae8e0a8d8ce7c3d1',1,'YAX::Matrix::CreateTranslation(float xT, float yT, float zT)'],['../struct_y_a_x_1_1_matrix.html#afb013fb6b90c16fea2381d9aeb74ffd8',1,'YAX::Matrix::CreateTranslation(const Vector3 &amp;vec)']]],
+  ['createworld',['CreateWorld',['../struct_y_a_x_1_1_matrix.html#a2d71a1f09953c17120138d952043eb91',1,'YAX::Matrix']]],
+  ['cross',['Cross',['../struct_y_a_x_1_1_vector3.html#aecea554fb916d0541f71ca14a8fc0502',1,'YAX::Vector3']]]
+];
