@@ -50,7 +50,7 @@ using YAX::MathHelper::Hermite;
 ```
 
 ### Documentation: 
-Is nearly nonexistant. Until I or another kind soul has the time to write it, use [XNA's MSDN documentation](https://msdn.microsoft.com/en-us/library/microsoft.xna.framework.aspx).
+Go [here](http://swillis57.github.io/YAX.Math/annotated.html) for the Doxygen-generated documentation pages.
 
 ### Found a bug?
-If you find anything that doesn't quite match XNA's behavior (from a flipped sign to a completely wrong result), please do open up an issue or submit a pull request!
+If you find anything that doesn't quite match XNA's behavior (from a flipped sign to a completely wrong result) or something lacking in documentation, please do open up an issue or submit a pull request!
