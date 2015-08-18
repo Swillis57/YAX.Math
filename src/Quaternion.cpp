@@ -12,7 +12,7 @@ namespace YAX
         : X(x), Y(y), Z(z), W(w)
     {}
 
-    Quaternion::Quaternion(Vector3 xyz, float w)
+    Quaternion::Quaternion(const Vector3& xyz, float w)
         : Quaternion(xyz.X, xyz.Y, xyz.Z, w)
     {}
 

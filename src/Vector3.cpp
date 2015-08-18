@@ -106,6 +106,15 @@ namespace YAX
         return Vector3(x, y, z);
     }
 
+    Vector3 Vector3::Lerp(const Vector3& p1, const Vector3& p2, float t)
+    {
+        float x = MathHelper::Lerp(p1.X, p2.X, t);
+        float y = MathHelper::Lerp(p1.Y, p2.Y, t);
+        float z = MathHelper::Lerp(p1.Z, p2.Z, t);
+
+        return Vector3(x, y, z);
+    }
+
     Vector3 Vector3::Max(const Vector3& v1, const Vector3& v2)
     {
         float x = MathHelper::Max(v1.X, v2.X);
