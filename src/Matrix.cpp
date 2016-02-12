@@ -141,21 +141,13 @@ namespace YAX
 
     float Matrix::Determinant() const
     {
-        float s0 = M11*M22 - M12*M21;
-        float s1 = M11*M23 - M13*M21;
-        float s2 = M11*M24 - M14*M21;
-        float s3 = M12*M23 - M13*M22;
-        float s4 = M12*M24 - M14*M22;
-        float s5 = M13*M24 - M14*M23;
+        //4x4 laplace expansion
+        float c1 = M11 * ((M22*M33*M44)+(M23*M34*M41)+(M32*M43*M24)-(M42*M33*M24)-(M32*M23*M44)-(M43*M34*M22));
+        float c2 = -M12 * ((M21*M33*M34)+(M31*M42*M24)+(M23*M43*M41)-(M41*M33*M24)-(M31*M23*M44)-(M43*M34*M21));
+        float c3 = M13 * ((M21*M32*M44)+(M22*M34*M41)+(M31*M42*M24)-(M41*M32*M14)-(M31*M22*M44)-(M42*M34*M21));
+        float c4 = -M14 * ((M21*M32*M43)+(M32*M42*M23)+(M22*M33*M41)-(M41*M32*M23)-(M31*M22*M43)-(M42*M33*M21));
 
-        float c0 = M31*M42 - M32*M41;
-        float c1 = M31*M43 - M33*M41;
-        float c2 = M31*M44 - M34*M41;
-        float c3 = M32*M43 - M33*M42;
-        float c4 = M32*M44 - M34*M42;
-        float c5 = M33*M44 - M34*M43;
-
-        return s0*c5 - s1*c4 + s2*c3 + s3*c2 - s4*c1 + s5*c0;
+        return c1 + c2 + c3 + c4;
     }
 
     Matrix Matrix::CreateBillboard(const Vector3& objectPos, const Vector3& cameraPos,
@@ -203,7 +195,7 @@ namespace YAX
         zBasis = camToObj;
         float rotAxisDotZ = std::abs(Vector3::Dot(rotAxis, zBasis));
 
-        if (rotAxisDotZ > 0.998f)
+        if (rotAxisDotZ > 0.999f)
         {
             if (objectForward != nullptr)
             {
@@ -212,9 +204,9 @@ namespace YAX
             }
         }
 
-        if (rotAxisDotZ > 0.998f)
+        if (rotAxisDotZ > 0.999f)
         {
-            zBasis = std::abs(Vector3::Dot(rotAxis, Vector3::Forward)) > 0.998f ? Vector3::Right : Vector3::Forward;
+            zBasis = std::abs(Vector3::Dot(rotAxis, Vector3::Forward)) > 0.999f ? Vector3::Right : Vector3::Forward;
         }
 
         xBasis = Vector3::Normalize(Vector3::Cross(yBasis, zBasis));
